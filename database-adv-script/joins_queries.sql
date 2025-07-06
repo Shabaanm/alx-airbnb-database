@@ -11,8 +11,7 @@ FROM
 INNER JOIN 
     users ON bookings.user_id = users.id;
 
-Left Join 
-SELECT 
+## SELECT 
     properties.id AS property_id,
     properties.name AS property_name,
     reviews.id AS review_id,
@@ -22,6 +21,7 @@ FROM
     properties
 LEFT JOIN 
     reviews ON properties.id = reviews.property_id;
+
 ## SELECT 
     users.id AS user_id,
     users.name,
