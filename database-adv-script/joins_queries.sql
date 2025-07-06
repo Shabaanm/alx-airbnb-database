@@ -10,8 +10,9 @@ FROM
     bookings
 INNER JOIN 
     users ON bookings.user_id = users.id;
-
-## SELECT 
+-- Retrieve all properties and their reviews,
+-- including properties that have no reviews
+SELECT 
     properties.id AS property_id,
     properties.name AS property_name,
     reviews.id AS review_id,
