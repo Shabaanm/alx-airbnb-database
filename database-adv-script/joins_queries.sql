@@ -24,6 +24,8 @@ SELECT
     
 FROM 
     properties
+ORDER BY 
+    bookings.start_date DESC
 LEFT JOIN 
     reviews ON properties.id = reviews.property_id;
 
