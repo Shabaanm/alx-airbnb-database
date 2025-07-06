@@ -18,9 +18,10 @@ SELECT
     properties.id AS property_id,
     properties.name AS property_name,
     reviews.id AS review_id,
+    orderby.id AS orderby_id,
     reviews.rating,
     reviews.comment
-    orderby.comment
+    
 FROM 
     properties
 LEFT JOIN 
