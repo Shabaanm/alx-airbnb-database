@@ -11,7 +11,7 @@ FROM
 INNER JOIN 
     users ON bookings.user_id = users.id;
 
-# Left Join 
+Left Join 
 SELECT 
     properties.id AS property_id,
     properties.name AS property_name,
