@@ -20,10 +20,12 @@ SELECT
     reviews.id AS review_id,
     reviews.rating,
     reviews.comment
+    orderby.comment
 FROM 
     properties
 LEFT JOIN 
     reviews ON properties.id = reviews.property_id;
+
 
 ........................................................
 
