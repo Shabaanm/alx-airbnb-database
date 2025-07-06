@@ -1,3 +1,4 @@
+EXPLAIN
 SELECT
     bookings.id AS booking_id,
     bookings.start_date,
@@ -24,5 +25,7 @@ INNER JOIN
 INNER JOIN
     properties ON bookings.property_id = properties.id
 LEFT JOIN
-    payments ON bookings.payment_id = payments.id;
-
+    payments ON bookings.payment_id = payments.id
+WHERE
+    bookings.start_date >= '2024-01-01'
+    AND payments.status = 'Completed';
